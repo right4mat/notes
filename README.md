@@ -11,6 +11,13 @@ npm install
 # for IOS install
 cd ios && pod install
 
+# for Android install
+# you may need to add a local.properties file
+# in the android folder
+# in the case you do the line need should
+# look lke sdk.dir = /Users/USERNAME/Library/Android/sdk
+
+
 # run ios
 npm run ios
 
