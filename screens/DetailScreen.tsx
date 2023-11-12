@@ -8,7 +8,6 @@ import {
   Card,
   Colors,
   Picker,
-  Spacings,
   Text,
   TouchableOpacity,
   View,
@@ -69,7 +68,6 @@ export const DetailScreen: FC<DetailScreenProps> = observer(
               }
               data={Object.values(notes) || []}
               numColumns={1}
-              itemSpacing={Spacings.s3}
               keepItemSize={false}
               renderItem={({item}) => (
                 <TouchableOpacity
