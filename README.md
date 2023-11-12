@@ -1,6 +1,6 @@
 # Notes by client and category
 
-> **Note**: Was built with node 18 and ruby 3.1.4
+> **Note**: Was built with node 20 and ruby 3.1.4
 
 ## install/run
 
@@ -10,6 +10,13 @@ npm install
 
 # for IOS install
 cd ios && pod install
+
+# for Android install
+# you may need to add a local.properties file
+# in the android folder
+# in the case you do the line its something like
+# sdk.dir = /Users/<USERNAME>/Library/Android/sdk
+
 
 # run ios
 npm run ios
@@ -48,3 +55,4 @@ npm run android
 - Splash screen
 - App icon
 - general clean up of the code
+- tests
