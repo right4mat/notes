@@ -55,3 +55,4 @@ npm run android
 - Splash screen
 - App icon
 - general clean up of the code
+- tests
