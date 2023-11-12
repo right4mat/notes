@@ -1,6 +1,6 @@
 # Notes by client and category
 
-> **Note**: Was built with node 18 and ruby 3.1.4
+> **Note**: Was built with node 20 and ruby 3.1.4
 
 ## install/run
 
