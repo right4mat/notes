@@ -6,8 +6,9 @@ import {Header} from '../components/Header';
 import {Screen} from '../components/Screen';
 import {useStores} from '../models';
 import {groups} from '../models/groups.json';
+import {AppStackScreenProps} from '../navigators';
 
-interface NoteEditorScreenProps {}
+interface NoteEditorScreenProps extends AppStackScreenProps<'NoteEditor'> {}
 
 export const NoteEditorScreen: FC<NoteEditorScreenProps> = observer(
   function NoteEditorScreen(_props) {

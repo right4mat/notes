@@ -17,10 +17,11 @@ import {Header} from '../components/Header';
 import {Screen} from '../components/Screen';
 import {useStores} from '../models';
 import {clients, groups} from '../models/groups.json';
+import {AppStackScreenProps} from '../navigators';
 
-interface NotesListScreenProps {}
+interface NotesListScreenProps extends AppStackScreenProps<'NotesList'> {}
 
-export const NotesListScreen: FC<DetailScreenProps> = observer(
+export const NotesListScreen: FC<NotesListScreenProps> = observer(
   function NotesListScreen(_props) {
     const {navigation} = _props;
     const {
