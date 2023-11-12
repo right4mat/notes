@@ -22,7 +22,7 @@ npm run android
 
 ## Task
 
-- Create a simple note-taking app. ✅
+- Create a simple note-taking app in roughly 2 hours ✅
 - Users should be able to create different notes and link them to a client and a category. ✅
 - The client and category data should be stored in a JSON file. ✅
 - The main page of the app should display a FlatList of all existing notes or show a message if there are none. ✅
@@ -30,3 +30,10 @@ npm run android
 - The app should have a button to add new notes. When adding a new note, the user should be able to select a client, choose a category, and enter the note text. ✅
 - All notes should be stored in local memory and persisted so that they are not lost when the user closes and reopens the app. ✅
 - Users should be able to edit and delete notes as needed. ✅
+
+## Todo (tried to keep to the 2 hours)
+
+- Should have delete function on both edit and list screens
+- Should have some simple filtering
+- Splash screen
+- App icon
