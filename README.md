@@ -39,6 +39,7 @@ npm run android
 
 <img src="https://github.com/right4mat/notes/assets/55075658/52176575-c866-46cd-ba7a-a06a3515a175" width="23%"/>
 <img src="https://github.com/right4mat/notes/assets/55075658/2fcae40e-ed5c-4fb7-9a87-a8bbaede7afa" width="23%"/>
+<img src="https://github.com/right4mat/notes/assets/55075658/d825f78b-1438-461d-853f-d5beccf146d8" width="23%"/>
 
 ## Todo (tried to keep to the 2 hours)
 
