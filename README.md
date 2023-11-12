@@ -29,16 +29,16 @@ npm run android
 - All notes should be stored in local memory and persisted so that they are not lost when the user closes and reopens the app. ✅
 - Users should be able to edit and delete notes as needed. ✅
 
-<img src="https://github.com/right4mat/notes/assets/55075658/f2054b8d-0040-47e5-9571-51368f0aad5a"  width="25%"/>
-<img src="https://github.com/right4mat/notes/assets/55075658/ad0699fc-bf00-459e-9fba-c3d313d6c20d"  width="25%"/>
-<img src="https://github.com/right4mat/notes/assets/55075658/6c129470-560e-4740-ad67-c838cf664a70" width="25%"/>
-<img src="https://github.com/right4mat/notes/assets/55075658/3d752468-91c9-41bc-b63f-d9e654945452" width="25%"/>
+<img src="https://github.com/right4mat/notes/assets/55075658/f2054b8d-0040-47e5-9571-51368f0aad5a"  width="23%"/>
+<img src="https://github.com/right4mat/notes/assets/55075658/ad0699fc-bf00-459e-9fba-c3d313d6c20d"  width="23%"/>
+<img src="https://github.com/right4mat/notes/assets/55075658/6c129470-560e-4740-ad67-c838cf664a70" width="23%"/>
+<img src="https://github.com/right4mat/notes/assets/55075658/3d752468-91c9-41bc-b63f-d9e654945452" width="23%"/>
 
 
 - Dark mode
 
-<img src="https://github.com/right4mat/notes/assets/55075658/52176575-c866-46cd-ba7a-a06a3515a175" width="35%"/>
-<img src="https://github.com/right4mat/notes/assets/55075658/2fcae40e-ed5c-4fb7-9a87-a8bbaede7afa" width="35%"/>
+<img src="https://github.com/right4mat/notes/assets/55075658/52176575-c866-46cd-ba7a-a06a3515a175" width="23%"/>
+<img src="https://github.com/right4mat/notes/assets/55075658/2fcae40e-ed5c-4fb7-9a87-a8bbaede7afa" width="23%"/>
 
 ## Todo (tried to keep to the 2 hours)
 
