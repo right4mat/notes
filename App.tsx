@@ -1,122 +1,73 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * Welcome to the main entry point of the app. In this file, we'll
+ * be kicking off our app.
  *
- * @format
+ * Most of this file is boilerplate and you shouldn't need to modify
+ * it very often. But take some time to look through and understand
+ * what is going on here.
+ *
+ * The app navigation resides in ./app/navigators, so head over there
+ * if you're interested in adding screens and navigators.
  */
 
-import type {PropsWithChildren} from 'react';
 import React from 'react';
+import {useColorScheme} from 'react-native';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  SafeAreaProvider,
+  initialWindowMetrics,
+} from 'react-native-safe-area-context';
+import {Colors} from 'react-native-ui-lib';
+import {useInitialRootStore} from './models';
+import {AppNavigator, useNavigationPersistence} from './navigators';
 
-import {SegmentedControl} from 'react-native-ui-lib';
+import * as storage from './utils/storage';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Icon name="edit" />
-      <SegmentedControl segments={[{label: '1st'}, {label: '2nd'}]} />
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+Colors.loadSchemes({
+  light: {
+    screenBG: 'transparent',
+    textColor: Colors.grey10,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  dark: {
+    screenBG: Colors.grey10,
+    textColor: Colors.white,
   },
 });
 
+Colors.loadDesignTokens({primaryColor: '#e6b11b'});
+
+export const NAVIGATION_PERSISTENCE_KEY = 'NAVIGATION_STATE';
+
+/**
+ * This is the root component of our app.
+ */
+function App() {
+  const {
+    initialNavigationState,
+    onNavigationStateChange,
+    isRestored: isNavigationStateRestored,
+  } = useNavigationPersistence(storage, NAVIGATION_PERSISTENCE_KEY);
+
+  const theme = useColorScheme();
+
+  const {rehydrated} = useInitialRootStore();
+
+  // Before we show the app, we have to wait for our state to be ready.
+  if (!rehydrated || !isNavigationStateRestored) {
+    return null;
+  }
+
+  // set the color theme for the app
+
+  Colors.setScheme(theme === 'dark' ? 'dark' : 'light');
+
+  // otherwise, we're ready to render the app
+  return (
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <AppNavigator
+        initialState={initialNavigationState}
+        onStateChange={onNavigationStateChange}
+      />
+    </SafeAreaProvider>
+  );
+}
 export default App;
