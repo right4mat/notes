@@ -1,6 +1,6 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Notes by client and group
+# Notes by client and category
 
 > **Note**: Was built with node 18 and ruby 3.1.4
 
