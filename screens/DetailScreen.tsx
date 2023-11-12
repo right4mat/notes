@@ -28,7 +28,7 @@ export const DetailScreen: FC<DetailScreenProps> = observer(
       NoteStore: {notes, deleteNote},
     } = useStores();
     const [editMode, setEditMode] = useState(false);
-    const [client, setClient] = useState(null);
+    const [client, setClient] = useState();
     return (
       <Screen>
         <Header
