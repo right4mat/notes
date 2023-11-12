@@ -41,3 +41,4 @@ npm run android
 - Should have some simple filtering
 - Splash screen
 - App icon
+- general clean up of the code
