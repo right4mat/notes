@@ -31,6 +31,10 @@ npm run android
 - All notes should be stored in local memory and persisted so that they are not lost when the user closes and reopens the app. ✅
 - Users should be able to edit and delete notes as needed. ✅
 
+## Bonus
+
+- Dark and light theme version
+
 ## Todo (tried to keep to the 2 hours)
 
 - Should have delete function on both edit and list screens
