@@ -8,8 +8,8 @@ import {StackScreenProps} from '@react-navigation/stack';
 import {observer} from 'mobx-react-lite';
 import React from 'react';
 import {useColorScheme} from 'react-native';
-import {DetailScreen} from '../screens/DetailScreen';
 import {NoteEditorScreen} from '../screens/NoteEditorScreen';
+import {NotesListScreen} from '../screens/NotesListScreen';
 
 import {
   gestureHandlerRootHOC,
@@ -54,7 +54,7 @@ const AppStack = observer(
       <Stack.Navigator
         screenOptions={{headerShown: false}}
         initialRouteName={'NotesList'}>
-        <Stack.Screen name="NotesList" component={DetailScreen} />
+        <Stack.Screen name="NotesList" component={NotesListScreen} />
         <Stack.Screen name="NoteEditor" component={NoteEditorScreen} />
       </Stack.Navigator>
     );
