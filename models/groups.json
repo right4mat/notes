@@ -1,0 +1,14 @@
+{
+  "clients": {
+    "0": {"name": "Client 1"},
+    "1": {"name": "Client 2"},
+    "2": {"name": "Client 3"},
+    "3": {"name": "Client 4"},
+    "4": {"name": "Client 5"}
+  },
+  "groups": {
+    "0": {"name": "Goal Evidence", "color": "#fa383e"},
+    "1": {"name": "Support Coordination", "color": "#ffba00"},
+    "2": {"name": "Active Duty", "color": "#54c7ec"}
+  }
+}
